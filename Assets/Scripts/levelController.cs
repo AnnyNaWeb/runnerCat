@@ -6,14 +6,32 @@ public class levelController : MonoBehaviour
 {
 
     public float speed;
+    public GameObject Mission;
+    bool started;
 
     void Start()
     {
-
+        started = false;
+        
     }
-
-    void Update()
+    void MoveCarta()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
+    }
+
+    IEnumerator InitMission(){
+        Mission.SetActive(true);
+        yield return new WaitForSeconds(5);
+        Mission.SetActive(false);
+        started = true;
+    }
+    void Update()
+    {
+        if(started){
+            MoveCarta();
+        }else {
+            StartCoroutine(InitMission());
+        }
+
     }
 }

@@ -9,6 +9,10 @@ public class sendLetter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        SendLetter();
+    }
+
+    private void SendLetter(){
         PlayerPrefs.SetInt("Collection", mailNumber);
         Debug.Log("Mail Number: " + mailNumber);
     }
