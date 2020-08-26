@@ -24,7 +24,10 @@ public class charController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Mover();
+        if(levelController.started){
+            Mover();
+        }
+        
     }
 
     void Mover()

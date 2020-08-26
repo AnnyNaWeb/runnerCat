@@ -7,7 +7,7 @@ public class levelController : MonoBehaviour
 
     public float speed;
     public GameObject Mission;
-    bool started;
+    public static bool started;
 
     void Start()
     {
