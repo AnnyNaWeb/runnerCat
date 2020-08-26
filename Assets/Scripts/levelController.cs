@@ -11,7 +11,7 @@ public class levelController : MonoBehaviour
 
     void Start()
     {
-        started = false;
+        started = true;
         
     }
     void MoveCarta()
