@@ -275,10 +275,10 @@ RectTransform:
   m_Father: {fileID: 2017090307}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.26200002, y: 0.21000001}
-  m_AnchorMax: {x: 0.666, y: 0.80500007}
-  m_AnchoredPosition: {x: 2.2000122, y: 0.74902344}
-  m_SizeDelta: {x: -2, y: -0.5011139}
+  m_AnchorMin: {x: 0.17342483, y: 0.21000001}
+  m_AnchorMax: {x: 0.7545752, y: 0.8}
+  m_AnchoredPosition: {x: -32.37, y: 0.75056076}
+  m_SizeDelta: {x: -64.7496, y: 0.4988861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139316689
 MonoBehaviour:
@@ -299,7 +299,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "MISS\xC3O\n\nConquiste uma carta para enviar a seu amigo!"
+  m_text: "SUA MISS\xC3O \xC9:\n\nColetar Itens\nAcumular Pontos\nConquistar Cartas
+    para Enviar a Seus Amigos\n\nREADY GO!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -327,13 +328,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 46
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -365,15 +366,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 13.413605, y: 0, z: -62.985596, w: 0}
   m_textInfo:
     textComponent: {fileID: 139316689}
-    characterCount: 52
+    characterCount: 99
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 9
+    spaceCount: 17
+    wordCount: 16
     linkCount: 0
-    lineCount: 6
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
