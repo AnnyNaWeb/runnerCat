@@ -10,9 +10,14 @@ public class charController : MonoBehaviour
 
     Rigidbody2D rb;
 
+    //public Transform direcaoAtual;
+   // public Transform esquerda;
+   // public Transform direita;
+
     
     public Slider vida;
     public Text morreu;
+    //public SpriteRenderer sr;
     //SpriteRenderer sr;
 
     void Start()
@@ -28,7 +33,7 @@ public class charController : MonoBehaviour
     }
 
     
-    /*private void OnCollisionEnter2D(Collision2D other){
+    private void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.name.Equals("obstaculo")){
             if(vida.value > 0){
                 vida.value--;
@@ -44,16 +49,33 @@ public class charController : MonoBehaviour
             }
 
         }
-    }*/
+    }
 
 
     private void FixedUpdate()
     {
         if(levelController.started){
             Move();
+          //  TesteMove();
         }
         
     }
+
+   /* void TesteMove(){
+        if(direcaoAtual == esquerda && transform.position == esquerda.position){
+            direcaoAtual = direita;
+        }
+
+        if(direcaoAtual == direita && transform.position == direita.position){
+            direcaoAtual = esquerda;
+        }
+        transform.position = Vector2.MoveTowards(transform.position, direcaoAtual.position, 10*Time.deltaTime);
+       
+       if(transform.position.x < direcaoAtual.position.x) {
+           sr.flipX = false;}
+
+       else{ sr.flipX = true;}
+    }*/
 
     void Move()
     {
