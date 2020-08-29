@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 80054142}
   m_Layer: 0
   m_Name: triggercaixinha1
-  m_TagString: Life
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1155,7 +1155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732809015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8999996, y: 0.44, z: -11.7}
+  m_LocalPosition: {x: 7.8999996, y: 0.31, z: -11.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1176,8 +1176,8 @@ MonoBehaviour:
   spawn: {fileID: 6882163802020573297, guid: 40928136a3ab6514ba8be9aa64d9b3ea, type: 3}
   spawnTime: 10
   spawnDelay: 4
-  yMaximo: 0.44
-  yMinimo: -4.85
+  yMaximo: 0
+  yMinimo: -4
 --- !u!1 &735350476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1474,7 @@ GameObject:
   - component: {fileID: 1009312950}
   - component: {fileID: 1009312949}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Tempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1660,8 +1660,6 @@ MonoBehaviour:
   movementSpeed: 10
   yMaximo: 2.46
   yMinimo: -3.17
-  vida: {fileID: 942532260}
-  morreu: {fileID: 2033836645}
 --- !u!50 &1088609863
 Rigidbody2D:
   serializedVersion: 4
@@ -1721,6 +1719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cbb7c4bfbaa19438aad9f7b1955c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeCount: {fileID: 942532260}
+  textCanvas: {fileID: 2033836645}
 --- !u!1 &1181139459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2658,7 @@ GameObject:
   - component: {fileID: 2001382209}
   m_Layer: 0
   m_Name: triggercaixinha2
-  m_TagString: obstaculo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
