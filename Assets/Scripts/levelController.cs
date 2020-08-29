@@ -9,6 +9,7 @@ public class levelController : MonoBehaviour {
     public GameObject Mission;
     public GameObject Player;
     public GameObject Chao;
+    public GameObject Ceu;
     public static bool started;
 
     public float totalTime;
@@ -49,6 +50,7 @@ public class levelController : MonoBehaviour {
         Mission.SetActive (false);
         Player.SetActive (true);
         Chao.SetActive (true);
+        Ceu.SetActive (true);
         started = true;
     }
     void Update () {
@@ -57,6 +59,7 @@ public class levelController : MonoBehaviour {
         } else {
             Player.SetActive (false);
             Chao.SetActive (false);
+            Ceu.SetActive (false);
             StartCoroutine (InitMission ());
         }
 
