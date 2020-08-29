@@ -12,7 +12,7 @@ public class levelController : MonoBehaviour
 
     void Start()
     {
-        started = true;
+        started = false;
         
     }
     void PlayGame()

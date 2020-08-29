@@ -7,12 +7,14 @@ public class charController : MonoBehaviour
 {
 
     public float movementSpeed;
+    public float yMaximo;
+    public float yMinimo;
 
     Rigidbody2D rb;
 
     //public Transform direcaoAtual;
    // public Transform esquerda;
-   // public Transform direita;
+ //   public Transform direita;
 
     
     public Slider vida;
@@ -79,6 +81,10 @@ public class charController : MonoBehaviour
 
     void Move()
     {
+        transform.position = new Vector2(transform.position.x,Mathf.Clamp(transform.position.y, yMinimo, yMaximo));
         transform.Translate(Vector2.up * Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime);
+
+
+
     }
 }
