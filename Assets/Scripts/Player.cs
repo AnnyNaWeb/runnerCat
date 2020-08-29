@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public static int lifeCount;
+
+
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Life")){
+            Destroy(other.gameObject);
+            lifeCount++;
+            Debug.Log("Coletou Vida Hein");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
