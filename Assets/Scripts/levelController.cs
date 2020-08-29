@@ -8,6 +8,7 @@ public class levelController : MonoBehaviour
     public float speed;
     public GameObject Mission;
     public GameObject Player;
+    public GameObject Chao;
     public static bool started;
 
     void Start()
@@ -25,6 +26,7 @@ public class levelController : MonoBehaviour
         yield return new WaitForSeconds(5);
         Mission.SetActive(false);
         Player.SetActive(true);
+        Chao.SetActive(true);
         started = true;
     }
     void Update()
@@ -33,6 +35,7 @@ public class levelController : MonoBehaviour
             PlayGame();
         }else {
             Player.SetActive(false);
+            Chao.SetActive(false);
             StartCoroutine(InitMission());
         }
 

@@ -2782,6 +2782,7 @@ MonoBehaviour:
   speed: -5
   Mission: {fileID: 553895814}
   Player: {fileID: 1088609858}
+  Chao: {fileID: 1748306364}
 --- !u!1 &2122329318
 GameObject:
   m_ObjectHideFlags: 0
