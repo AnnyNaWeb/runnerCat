@@ -10,7 +10,11 @@ public class levelController : MonoBehaviour {
     public GameObject Player;
     public GameObject Chao;
     public GameObject Ceu;
+    public GameObject Finish;
     public static bool started;
+    public bool missionFase;
+    public static bool endGame;
+    public Text textCanvas;
 
     public float totalTime;
     public Text tempo;
@@ -21,6 +25,8 @@ public class levelController : MonoBehaviour {
 
     void Start () {
         started = false;
+        missionFase = true;
+        endGame = false;
 
     }
 
@@ -31,6 +37,9 @@ public class levelController : MonoBehaviour {
       }*/
 
     void PlayGame () {
+        Player.SetActive (true);
+        Chao.SetActive (true);
+        Ceu.SetActive (true);
         totalTime -= Time.deltaTime;
         minutes = (int) (totalTime / 60);
         seconds = (int) (totalTime % 60);
@@ -40,7 +49,7 @@ public class levelController : MonoBehaviour {
             transform.Translate (speed * Time.deltaTime, 0, 0);
 
         } else {
-            started = false;
+            endGame = true;
         }
     }
 
@@ -48,20 +57,33 @@ public class levelController : MonoBehaviour {
         Mission.SetActive (true);
         yield return new WaitForSeconds (5);
         Mission.SetActive (false);
-        Player.SetActive (true);
-        Chao.SetActive (true);
-        Ceu.SetActive (true);
         started = true;
     }
+
+    void FinishGame () {
+        Player.SetActive (false);
+        Chao.SetActive (false);
+        Ceu.SetActive (false);
+        Finish.SetActive (true);
+        textCanvas.text = "DEU MOLE NÉ AMADA";
+
+    }
+
     void Update () {
+
         if (started) {
             PlayGame ();
-        } else {
+            if (endGame) {
+                FinishGame ();
+            }
+        } else if (missionFase) {
             Player.SetActive (false);
             Chao.SetActive (false);
             Ceu.SetActive (false);
+            Finish.SetActive (false);
             StartCoroutine (InitMission ());
         }
 
     }
+
 }
