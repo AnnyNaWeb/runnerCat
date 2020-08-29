@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class levelController : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class levelController : MonoBehaviour
     public GameObject Chao;
     public static bool started;
 
+    public float totalTime;
+    public Text tempo;
+    private float minutes;
+    private float seconds = 20;
+
+
     void Start()
     {
         started = false;
@@ -18,8 +25,24 @@ public class levelController : MonoBehaviour
     }
     void PlayGame()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        totalTime -= Time.deltaTime;
+        minutes = (int)(totalTime / 60);
+        seconds = (int)(totalTime % 60);
+        tempo.text = minutes.ToString()+ " : " + seconds.ToString();
+
+        if(seconds >= 0){
+             transform.Translate(speed * Time.deltaTime, 0, 0);
+        } else {
+           started = false;
+        }
     }
+
+    void SpawnItens()
+    {
+
+    }
+
+   
 
     IEnumerator InitMission(){
         Mission.SetActive(true);

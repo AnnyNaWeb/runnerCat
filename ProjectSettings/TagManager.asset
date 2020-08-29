@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstaculo
   - recupera
+  - Life
   layers:
   - Default
   - TransparentFX
