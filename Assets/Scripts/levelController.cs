@@ -61,6 +61,7 @@ public class levelController : MonoBehaviour {
     }
 
     void FinishGame () {
+        SpawnPoint.stopSpawning = true;
         Player.SetActive (false);
         Chao.SetActive (false);
         Ceu.SetActive (false);

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
                 levelController.endGame = true;
             }
 
-        } else if (other.gameObject.CompareTag ("Life")) {
+        } else if (other.gameObject.CompareTag ("recupera")) {
             Destroy (other.gameObject);
             if (lifeCount.value < 10) {
                 lifeCount.value++;

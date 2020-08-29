@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour {
-    public GameObject spawn;
+    public GameObject cone;
+    public GameObject life;
     public static bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
@@ -11,18 +12,27 @@ public class SpawnPoint : MonoBehaviour {
     public float yMinimo;
 
     void Start () {
-        InvokeRepeating ("SpawnObject", spawnTime, spawnDelay);
+        InvokeRepeating ("SpawnCone", spawnTime, spawnDelay);
+        InvokeRepeating ("SpawnLife", spawnTime, (spawnDelay + 5F));
     }
 
-    public void SpawnObject () {
+    public void SpawnCone () {
         transform.position = new Vector2 (7.9F, Random.Range (yMaximo, yMinimo));
-        Instantiate (spawn, transform.position, transform.rotation);
-
+        Instantiate (cone, transform.position, transform.rotation);
         if (stopSpawning) {
-            CancelInvoke ("SpawnObject");
+            CancelInvoke ("SpawnCone");
         }
 
     }
+
+    public void SpawnLife () {
+        transform.position = new Vector2 (11F, Random.Range (yMaximo, yMinimo));
+        Instantiate (life, transform.position, transform.rotation);
+        if (stopSpawning) {
+            CancelInvoke ("SpawnLife");
+        }
+    }
+
     void Update () {
 
     }
