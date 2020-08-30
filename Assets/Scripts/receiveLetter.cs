@@ -12,6 +12,7 @@ public class receiveLetter : MonoBehaviour {
     public Sprite newSprite;
 
     void Start () {
+
         spr = GetComponent<SpriteRenderer> ();
 
         Debug.Log ("Mail Number: " + (letterNumber == (PlayerPrefs.GetInt ("Collection"))));
@@ -20,9 +21,8 @@ public class receiveLetter : MonoBehaviour {
         if (letterNumber <= (PlayerPrefs.GetInt ("Collection"))) {
             spr.sprite = newSprite;
             button.SetActive (true);
-        } else {
-            button.SetActive (false);
         }
+
     }
 
 }
