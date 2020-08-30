@@ -21,7 +21,7 @@ public class SpawnPoint : MonoBehaviour {
     }
 
     public void SpawnCone () {
-        transform.position = new Vector2 (7.9F, Random.Range (yMaximo, yMinimo));
+        transform.position = new Vector2 (10F, Random.Range (yMaximo, yMinimo));
         Instantiate (gato, transform.position, transform.rotation);
         if (stopSpawning) {
             CancelInvoke ("SpawnCone");
@@ -29,7 +29,7 @@ public class SpawnPoint : MonoBehaviour {
 
     }
     public void SpawnGato () {
-        transform.position = new Vector2 (11.8F, Random.Range (yMaximo, yMinimo));
+        transform.position = new Vector2 (14F, Random.Range (yMaximo, yMinimo));
         Instantiate (cone, transform.position, transform.rotation);
         if (stopSpawning) {
             CancelInvoke ("SpawnGato");
@@ -38,7 +38,7 @@ public class SpawnPoint : MonoBehaviour {
     }
 
     public void SpawnOtherGato () {
-        transform.position = new Vector2 (13F, Random.Range (yMaximo, yMinimo));
+        transform.position = new Vector2 (163F, Random.Range (yMaximo, yMinimo));
         Instantiate (outrogato, transform.position, transform.rotation);
         if (stopSpawning) {
             CancelInvoke ("SpawnOtherGato");
@@ -47,7 +47,7 @@ public class SpawnPoint : MonoBehaviour {
     }
 
     public void SpawnLife () {
-        transform.position = new Vector2 (9F, Random.Range (yMaximo, yMinimo));
+        transform.position = new Vector2 (12F, Random.Range (yMaximo, yMinimo));
         Instantiate (life, transform.position, transform.rotation);
         if (stopSpawning) {
             CancelInvoke ("SpawnLife");
