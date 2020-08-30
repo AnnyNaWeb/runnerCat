@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1828756e13473c04ca87717e14c3c327
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hesster Mofet DIRTY_TRIAL
+  fontNames:
+  - Hesster Mofet DIRTY_TRIAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 751e3e3a83a93854190fff036c54dca6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

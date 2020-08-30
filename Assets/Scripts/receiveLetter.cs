@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class receiveLetter : MonoBehaviour {
 
-    public static int letterNumber;
+    public int letterNumber;
 
     SpriteRenderer spr;
-    public GameObject button;
 
     public Sprite newSprite;
-
+    public GameObject readLetter;
     void Start () {
-
+        readLetter.SetActive (false);
         spr = GetComponent<SpriteRenderer> ();
 
         Debug.Log ("Mail Number: " + (letterNumber == (PlayerPrefs.GetInt ("Collection"))));
@@ -20,9 +19,7 @@ public class receiveLetter : MonoBehaviour {
 
         if (letterNumber <= (PlayerPrefs.GetInt ("Collection"))) {
             spr.sprite = newSprite;
-            button.SetActive (true);
+            readLetter.SetActive (true);
         }
-
     }
-
 }

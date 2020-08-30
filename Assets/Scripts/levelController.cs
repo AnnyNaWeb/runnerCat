@@ -11,6 +11,7 @@ public class levelController : MonoBehaviour {
     public GameObject Chao;
     public GameObject Ceu;
     public GameObject Cidade;
+    public GameObject Arvores;
     public GameObject Finish;
     public static bool started;
     public bool missionFase;
@@ -41,6 +42,7 @@ public class levelController : MonoBehaviour {
         Player.SetActive (true);
         Chao.SetActive (true);
         Cidade.SetActive (true);
+        Arvores.SetActive (true);
         Ceu.SetActive (true);
         totalTime -= Time.deltaTime;
         minutes = (int) (totalTime / 60);
@@ -67,6 +69,7 @@ public class levelController : MonoBehaviour {
         SpawnPoint.stopSpawning = true;
         Player.SetActive (false);
         Chao.SetActive (false);
+        Arvores.SetActive (false);
         Ceu.SetActive (false);
         Cidade.SetActive (false);
         Finish.SetActive (true);
@@ -85,6 +88,7 @@ public class levelController : MonoBehaviour {
             Player.SetActive (false);
             Chao.SetActive (false);
             Ceu.SetActive (false);
+            Arvores.SetActive (false);
             Cidade.SetActive (false);
             Finish.SetActive (false);
             StartCoroutine (InitMission ());
