@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &80054139
 Transform:
   m_ObjectHideFlags: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffe78e52931f7e4baa4e4bb8888aecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mailNumber: 0
+  mailNumber: 1
 --- !u!1 &123624877
 GameObject:
   m_ObjectHideFlags: 0
