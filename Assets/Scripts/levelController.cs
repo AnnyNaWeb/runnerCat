@@ -59,7 +59,7 @@ public class levelController : MonoBehaviour {
 
     IEnumerator InitMission () {
         Mission.SetActive (true);
-        yield return new WaitForSeconds (5);
+        yield return new WaitForSeconds (10);
         started = true;
         Mission.SetActive (false);
 

@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public Slider lifeCount;
+    public GameObject Sticker;
+    public static int countSticker;
+
+    //se coletar mais de 5 e terminar no tempo, habilita carta
+    //se coletar menos de 5 e terminar no tempo, não habilita carta
+    //se bater e perder muita vida, tente novamente
 
     private void OnTriggerEnter2D (Collider2D other) {
         if (other.gameObject.CompareTag ("obstaculo")) {
