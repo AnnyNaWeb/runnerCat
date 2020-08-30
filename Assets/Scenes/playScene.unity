@@ -866,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732809015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.31, y: -0.72, z: -11.7}
+  m_LocalPosition: {x: 11.8, y: -0.72, z: -11.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -885,6 +885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cone: {fileID: 6882163802020573297, guid: 40928136a3ab6514ba8be9aa64d9b3ea, type: 3}
+  gato: {fileID: 2776310425749469383, guid: 7ea82f2fdd6c2a04f8ffd19f9ce88498, type: 3}
+  outrogato: {fileID: 4322332536308416335, guid: d3ba8017a153ead4488855d2e7a9c8f3,
+    type: 3}
   life: {fileID: 1813054541064790589, guid: 792f66b27ed92a64d97e40e5cb2044ef, type: 3}
   spawnTime: 10
   spawnDelay: 4
@@ -1351,7 +1354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088609858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -2.8, z: 0}
+  m_LocalPosition: {x: -6.04, y: -2.72, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1370,7 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  yMaximo: 0.1
+  yMaximo: 0.78
   yMinimo: -3.17
 --- !u!50 &1088609863
 Rigidbody2D:
@@ -1406,7 +1409,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.870243, y: -5.92569}
+  m_Offset: {x: 2.870243, y: -3.9813213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1417,7 +1420,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.780666, y: 6.484624}
+  m_Size: {x: 12.780666, y: 10.373362}
   m_EdgeRadius: 0
 --- !u!114 &1088609865
 MonoBehaviour:
@@ -2423,8 +2426,6 @@ MonoBehaviour:
   textCanvas: {fileID: 1837896926}
   totalTime: 60
   tempo: {fileID: 1009312949}
-  itemPrefab: {fileID: 6882163802020573297, guid: 40928136a3ab6514ba8be9aa64d9b3ea,
-    type: 3}
 --- !u!1 &2122329318
 GameObject:
   m_ObjectHideFlags: 0

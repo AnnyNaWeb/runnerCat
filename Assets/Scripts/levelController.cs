@@ -22,7 +22,7 @@ public class levelController : MonoBehaviour {
     private float minutes;
     private float seconds = 60;
 
-    public GameObject itemPrefab;
+    //public GameObject itemPrefab;
 
     void Start () {
         started = false;
