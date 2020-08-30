@@ -10,6 +10,7 @@ public class levelController : MonoBehaviour {
     public GameObject Player;
     public GameObject Chao;
     public GameObject Ceu;
+    public GameObject Cidade;
     public GameObject Finish;
     public static bool started;
     public bool missionFase;
@@ -39,6 +40,7 @@ public class levelController : MonoBehaviour {
     void PlayGame () {
         Player.SetActive (true);
         Chao.SetActive (true);
+        Cidade.SetActive (true);
         Ceu.SetActive (true);
         totalTime -= Time.deltaTime;
         minutes = (int) (totalTime / 60);
@@ -56,8 +58,9 @@ public class levelController : MonoBehaviour {
     IEnumerator InitMission () {
         Mission.SetActive (true);
         yield return new WaitForSeconds (5);
-        Mission.SetActive (false);
         started = true;
+        Mission.SetActive (false);
+
     }
 
     void FinishGame () {
@@ -65,6 +68,7 @@ public class levelController : MonoBehaviour {
         Player.SetActive (false);
         Chao.SetActive (false);
         Ceu.SetActive (false);
+        Cidade.SetActive (false);
         Finish.SetActive (true);
         textCanvas.text = "DEU MOLE NÉ AMADA";
 
@@ -81,6 +85,7 @@ public class levelController : MonoBehaviour {
             Player.SetActive (false);
             Chao.SetActive (false);
             Ceu.SetActive (false);
+            Cidade.SetActive (false);
             Finish.SetActive (false);
             StartCoroutine (InitMission ());
         }
