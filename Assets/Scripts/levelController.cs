@@ -12,16 +12,19 @@ public class levelController : MonoBehaviour {
     public GameObject Ceu;
     public GameObject Cidade;
     public GameObject Arvores;
+
     public GameObject Finish;
+    public GameObject FinishLetter;
+
     public static bool started;
     public bool missionFase;
     public static bool endGame;
-    public Text textCanvas;
+    //public Text textCanvas;
 
     public float totalTime;
     public Text tempo;
     private float minutes;
-    private float seconds = 60;
+    private static float seconds = 60;
 
     //public GameObject itemPrefab;
 
@@ -67,13 +70,23 @@ public class levelController : MonoBehaviour {
 
     void FinishGame () {
         SpawnPoint.stopSpawning = true;
-        Player.SetActive (false);
-        Chao.SetActive (false);
-        Arvores.SetActive (false);
-        Ceu.SetActive (false);
-        Cidade.SetActive (false);
-        Finish.SetActive (true);
-        textCanvas.text = "DEU MOLE NÉ AMADA";
+
+        if (seconds > 0) {
+            Player.SetActive (false);
+            Chao.SetActive (false);
+            Arvores.SetActive (false);
+            Ceu.SetActive (false);
+            Cidade.SetActive (false);
+            Finish.SetActive (true);
+            //  textCanvas.text = "DEU MOLE NÉ AMADA";
+        } else if (seconds <= 0) {
+            Player.SetActive (false);
+            Chao.SetActive (false);
+            Arvores.SetActive (false);
+            Ceu.SetActive (false);
+            Cidade.SetActive (false);
+            FinishLetter.SetActive (true);
+        }
 
     }
 

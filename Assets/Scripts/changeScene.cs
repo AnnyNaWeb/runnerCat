@@ -11,6 +11,10 @@ public class changeScene : MonoBehaviour {
         SceneManager.LoadScene (nextSceneName);
     }
 
+    public void TryAgain () {
+        SceneManager.LoadScene ("playScene");
+    }
+
     public void DeleteCollection () {
         PlayerPrefs.DeleteAll ();
     }

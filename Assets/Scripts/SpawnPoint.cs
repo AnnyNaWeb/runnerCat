@@ -12,24 +12,15 @@ public class SpawnPoint : MonoBehaviour {
     public float spawnDelay;
     public float yMaximo;
     public float yMinimo;
-    //public GameObject letter;
 
     void Start () {
         InvokeRepeating ("SpawnCone", spawnTime, spawnDelay);
         InvokeRepeating ("SpawnOtherGato", spawnTime, (spawnDelay + 6F));
         InvokeRepeating ("SpawnGato", spawnTime, (spawnDelay + 3F));
         InvokeRepeating ("SpawnLife", spawnTime, (spawnDelay + 5F));
-        //     InvokeRepeating ("Letter", spawnTime, (spawnDelay + 40F));
+
     }
 
-    /*  public void Letter () {
-          transform.position = new Vector2 (11F, Random.Range (yMaximo, yMinimo));
-          Instantiate (letter, transform.position, transform.rotation);
-          if (stopSpawning) {
-              CancelInvoke ("Letter");
-          }
-
-      }*/
     public void SpawnCone () {
         transform.position = new Vector2 (10F, Random.Range (yMaximo, yMinimo));
         Instantiate (gato, transform.position, transform.rotation);

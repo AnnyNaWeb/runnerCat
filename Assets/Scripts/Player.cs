@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public Slider lifeCount;
-    public GameObject Sticker;
+    //public GameObject Sticker;
     public static int countSticker;
 
     //se coletar mais de 5 e terminar no tempo, habilita carta
