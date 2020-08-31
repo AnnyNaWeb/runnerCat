@@ -64,6 +64,7 @@ public class charController : MonoBehaviour {
         if (other.gameObject.CompareTag ("sticker")) {
             Destroy (other.gameObject);
             stickerCount++;
+            sticker.text = "  " + stickerCount.ToString ();
             //  stiker.text()
         }
     }

@@ -23,6 +23,7 @@ public class levelController : MonoBehaviour {
 
     public float totalTime;
     public Text tempo;
+
     private float minutes;
     private static float seconds = 60;
 
