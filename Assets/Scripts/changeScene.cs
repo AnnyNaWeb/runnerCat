@@ -14,6 +14,9 @@ public class changeScene : MonoBehaviour {
     public void PlayGame () {
         SceneManager.LoadScene ("playScene");
     }
+    public void Quit () {
+        Application.Quit ();
+    }
     public void Credits () {
         SceneManager.LoadScene ("Credits");
     }
