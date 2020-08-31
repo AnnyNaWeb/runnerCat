@@ -8,6 +8,8 @@ public class charController : MonoBehaviour {
     public float movementSpeed;
     public float yMaximo;
     public float yMinimo;
+    public static int stickerCount;
+    public Text sticker;
 
     Rigidbody2D rb;
 
@@ -20,6 +22,7 @@ public class charController : MonoBehaviour {
 
     void Start () {
         rb = GetComponent<Rigidbody2D> ();
+        stickerCount = 0;
         //sr = GetComponent<SpriteRenderer>();
     }
 
@@ -55,5 +58,13 @@ public class charController : MonoBehaviour {
         transform.position = new Vector2 (transform.position.x, Mathf.Clamp (transform.position.y, yMinimo, yMaximo));
         transform.Translate (Vector2.up * Input.GetAxisRaw ("Vertical") * movementSpeed * Time.deltaTime);
 
+    }
+
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.gameObject.CompareTag ("sticker")) {
+            Destroy (other.gameObject);
+            stickerCount++;
+            //  stiker.text()
+        }
     }
 }

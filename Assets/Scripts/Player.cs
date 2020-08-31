@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     //se bater e perder muita vida, tente novamente
 
     private void OnTriggerEnter2D (Collider2D other) {
+
         if (other.gameObject.CompareTag ("obstaculo")) {
             Destroy (other.gameObject);
             if (lifeCount.value > 0) {

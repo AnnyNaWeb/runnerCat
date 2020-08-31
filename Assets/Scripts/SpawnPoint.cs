@@ -7,6 +7,7 @@ public class SpawnPoint : MonoBehaviour {
     public GameObject gato;
     public GameObject outrogato;
     public GameObject life;
+    public GameObject sticker;
     public static bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
@@ -18,40 +19,61 @@ public class SpawnPoint : MonoBehaviour {
         InvokeRepeating ("SpawnOtherGato", spawnTime, (spawnDelay + 6F));
         InvokeRepeating ("SpawnGato", spawnTime, (spawnDelay + 3F));
         InvokeRepeating ("SpawnLife", spawnTime, (spawnDelay + 5F));
+        InvokeRepeating ("SpawnStickerFoto", spawnTime, (spawnDelay + 5F));
 
     }
 
     public void SpawnCone () {
-        transform.position = new Vector2 (10F, Random.Range (yMaximo, yMinimo));
-        Instantiate (gato, transform.position, transform.rotation);
+
         if (stopSpawning) {
             CancelInvoke ("SpawnCone");
+
+        } else {
+            transform.position = new Vector2 (10F, Random.Range (yMaximo, yMinimo));
+            Instantiate (gato, transform.position, transform.rotation);
+        }
+
+    }
+    public void SpawnStickerFoto () {
+
+        if (stopSpawning) {
+            CancelInvoke ("SpawnStickerFoto");
+
+        } else {
+            transform.position = new Vector2 (17F, Random.Range (yMaximo, yMinimo));
+            Instantiate (sticker, transform.position, transform.rotation);
         }
 
     }
     public void SpawnGato () {
-        transform.position = new Vector2 (14F, Random.Range (yMaximo, yMinimo));
-        Instantiate (cone, transform.position, transform.rotation);
+
         if (stopSpawning) {
             CancelInvoke ("SpawnGato");
+        } else {
+            transform.position = new Vector2 (14F, Random.Range (yMaximo, yMinimo));
+            Instantiate (cone, transform.position, transform.rotation);
         }
 
     }
 
     public void SpawnOtherGato () {
-        transform.position = new Vector2 (163F, Random.Range (yMaximo, yMinimo));
-        Instantiate (outrogato, transform.position, transform.rotation);
+
         if (stopSpawning) {
             CancelInvoke ("SpawnOtherGato");
+        } else {
+            transform.position = new Vector2 (163F, Random.Range (yMaximo, yMinimo));
+            Instantiate (outrogato, transform.position, transform.rotation);
         }
 
     }
 
     public void SpawnLife () {
-        transform.position = new Vector2 (12F, Random.Range (yMaximo, yMinimo));
-        Instantiate (life, transform.position, transform.rotation);
+
         if (stopSpawning) {
             CancelInvoke ("SpawnLife");
+        } else {
+            transform.position = new Vector2 (12F, Random.Range (yMaximo, yMinimo));
+            Instantiate (life, transform.position, transform.rotation);
         }
     }
 
